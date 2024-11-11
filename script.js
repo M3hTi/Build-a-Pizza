@@ -4,10 +4,28 @@ const crustElement = document.getElementById("crust");
 const addToCart = document.querySelector(".add-to-cart");
 
 
+
+const panel = document.querySelector(".cart-panel");
+
+
 const cart = {
+    price: 0,
     items: [],
     addItem : function(foodItem){
         this.items.push(foodItem);
+        //NOTE: Calculate price immediately when item is added
+        this.calculatePrice();
+    },
+    calculatePrice: function(){
+        this.price = 0;
+        this.items.forEach(item => {
+            const topping = item.toppings.length > 0 ? item.toppings.length * 1.5 : 0;
+            this.price += topping;
+        });
+        return this.price;
+    },
+    getPrice: function(){
+        return this.price.toLocaleString("en-US", {style: "currency", currency: "USD"});
     }
 }
 
@@ -67,12 +85,14 @@ addToCart.addEventListener("click", function(){
     console.log(pizza);
     cart.addItem(pizza);
     console.log(cart);
+    panel.innerHTML = "";
     cart.items.forEach(item => {
-        const panel = document.querySelector(".cart-panel");
         const cartItem = document.createElement("div");
         cartItem.className = "cart-item";
         cartItem.innerHTML = `Pizza : ${item.size}" ${item.crust} ${item.toppings.map(topping => topping.name + " " + "(" + topping.side + ")").join(", ")}`;
         panel.appendChild(cartItem);
     });
+    const total = document.querySelector(".price");
+    total.textContent = cart.getPrice();
 })
 
