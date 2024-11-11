@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hands-on Project 8-3: Build a Pizza</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Hands-on Project 8-3</h1>
+        <h2>Build a Pizza</h2>
+    </div>
+    
+    <div class="container">
+        <div class="options-panel">
+            <div class="size-selection">
+                <label for="size">Size (in.)</label>
+                <select id="size">
+                    <option value="14">14"</option>
+                    <option value="12">12"</option>
+                    <option value="16">16"</option>
+                </select>
+            </div>
+            
+            <div class="crust-selection">
+                <label for="crust">Pizza Crust</label>
+                <select id="crust">
+                    <option value="pan">pan</option>
+                    <option value="thin">thin</option>
+                    <option value="stuffed">stuffed</option>
+                </select>
+            </div>
+            
+            <div class="toppings-section">
+                <h3>Toppings ($1.50 ea.)</h3>
+                <div class="toppings-grid">
+                    <div class="topping-label"></div>
+                    <div>Full</div>
+                    <div>Right</div>
+                    <div>Left</div>
+                    <div>None</div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Pepperoni</div>
+                        <input type="radio" class="topping-option" name="Pepperoni">
+                        <input type="radio" class="topping-option" name="Pepperoni">
+                        <input type="radio" class="topping-option" name="Pepperoni">
+                        <input type="radio" class="topping-option" name="Pepperoni">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Ham</div>
+                        <input type="radio" class="topping-option" name="Ham">
+                        <input type="radio" class="topping-option" name="Ham">
+                        <input type="radio" class="topping-option" name="Ham">
+                        <input type="radio" class="topping-option" name="Ham">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Sausage</div>
+                        <input type="radio" class="topping-option" name="Sausage">
+                        <input type="radio" class="topping-option" name="Sausage">
+                        <input type="radio" class="topping-option" name="Sausage">
+                        <input type="radio" class="topping-option" name="Sausage">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Chicken</div>
+                        <input type="radio" class="topping-option" name="Chicken">
+                        <input type="radio" class="topping-option" name="Chicken">
+                        <input type="radio" class="topping-option" name="Chicken">
+                        <input type="radio" class="topping-option" name="Chicken">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Mushrooms</div>
+                        <input type="radio" class="topping-option" name="Mushrooms">
+                        <input type="radio" class="topping-option" name="Mushrooms">
+                        <input type="radio" class="topping-option" name="Mushrooms">
+                        <input type="radio" class="topping-option" name="Mushrooms">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Green Peppers</div>
+                        <input type="radio" class="topping-option" name="PaPpers">
+                        <input type="radio" class="topping-option" name="PaPpers">
+                        <input type="radio" class="topping-option" name="PaPpers">
+                        <input type="radio" class="topping-option" name="PaPpers">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Onions</div>
+                        <input type="radio" class="topping-option" name="Onions">
+                        <input type="radio" class="topping-option" name="Onions">
+                        <input type="radio" class="topping-option" name="Onions">
+                        <input type="radio" class="topping-option" name="Onions">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Tomatoes</div>
+                        <input type="radio" class="topping-option" name="Tomatoes">
+                        <input type="radio" class="topping-option" name="Tomatoes">
+                        <input type="radio" class="topping-option" name="Tomatoes">
+                        <input type="radio" class="topping-option" name="Tomatoes">
+                    </div>
+                    
+                    <div class="topping-row">
+                        <div class="topping-label">Jalapenos</div>
+                        <input type="radio" class="topping-option" name="Jalapenos">
+                        <input type="radio" class="topping-option" name="Jalapenos">
+                        <input type="radio" class="topping-option" name="Jalapenos">
+                        <input type="radio" class="topping-option" name="Jalapenos">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pizza-preview">
+            <div class="pizza-image"></div>
+            <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        
+        <div class="cart-panel">
+            <h3>Items in Cart</h3>
+            <div class="cart-items">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

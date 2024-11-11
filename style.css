@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4d03f;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.options-panel {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.pizza-preview {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-panel {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.toppings-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.topping-row {
+    display: contents;
+}
+
+.topping-label {
+    grid-column: span 1;
+}
+
+.topping-options {
+    display: contents;
+}
+
+.topping-option {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.topping-option.selected {
+    background-color: #3498db;
+}
+
+.pizza-image {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+.cart-item {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.topping-info {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
